@@ -1,15 +1,42 @@
-import React from 'react'
+import React from "react";
 
-const Cliente = ({cliente}) => {
-    const { nombre, empresa, email, telefono, id } = cliente
-    
+const Cliente = ({ cliente }) => {
+  const { nombre, empresa, email, telefono, id } = cliente;
+
   return (
-    <tr>
-        <td className="p-6">
-        {nombre}
-        </td>
-    </tr>
-  )
-}
+    <tr className="border-b">
+      <td className="p-6 space-y-2">
+        <p className="text-2xl text-gray-800">{nombre}</p>
+        <p>{empresa}</p>
+      </td>
 
-export default Cliente
+      <td className="p-6">
+        <p className="text-gray-600">
+          <spam className="text-gray-800 uppercase font-bold">Email:</spam>
+          {nombre}
+        </p>
+        <p className="text-gray-600">
+          <spam className="text-gray-800 uppercase font-bold">Tel:</spam>
+          {telefono}
+        </p>
+      </td>
+
+      <td className="p-6 flex gap-3">
+        <button
+          type="button"
+          className="text-blue-600 hover:text-blue-700 uppercase font-bold text-xs"
+        >
+          Editar
+        </button>
+        <button
+          type="button"
+          className="text-red-600 hover:text-blue-700 uppercase font-bold text-xs"
+        >
+          Eliminar
+        </button>
+      </td>
+    </tr>
+  );
+};
+
+export default Cliente;
